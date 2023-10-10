@@ -1,0 +1,377 @@
+* {
+    primary: #142850;
+    secondary: #00909E;
+    primary-light: #27496D;
+    secondary-light: #DAE1E7;
+}
+
+.login-view {
+    -fx-pref-width: 480px;
+    -fx-background-color: secondary-light;
+}
+
+.login-title {
+    -fx-alignment: center-left;
+    -fx-padding: 16px;
+    -fx-background-color: primary;
+    -fx-text-fill: white;
+}
+
+.login-title > .header {
+    -fx-font-size: 25px;
+    -fx-font-family: Impact;
+    -fx-text-fill: white;
+}
+
+.login-signup-button {
+    -fx-alignment: center-right;
+}
+
+.login-signup-button > .button, button:hover, .button:focused {
+    -fx-font-size: 18px;
+    -fx-font-family: Impact;
+    -fx-text-fill: white;
+}
+
+.login-signup-button > .button:hover, .button:focused {
+    -fx-background-color: secondary-light;
+    -fx-text-fill: primary;
+}
+
+.login-body {
+    -fx-padding: 16 32 16 16;
+}
+
+.text-field, .password-field, .button {
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-color: secondary;
+    -fx-border-radius: 5px;
+}
+
+.button:hover, .button:focused {
+    -fx-background-color: primary;
+    -fx-text-fill: secondary-light;
+}
+
+.signup-view {
+    -fx-pref-width: 480px;
+    -fx-background-color: secondary-light;
+}
+
+.signup-title {
+    -fx-alignment: center;
+    -fx-padding: 16px;
+    -fx-background-color: primary;
+    -fx-text-fill: white;
+}
+
+.signup-title > .header {
+    -fx-font-size: 30px;
+    -fx-font-family: Impact;
+    -fx-text-fill: white;
+}
+
+.signup-view {
+    -fx-pref-width: 480px;
+    -fx-background-color: secondary-light;
+}
+
+.signup-text-box {
+    -fx-alignment: center-left;
+    -fx-padding: 15 10 10 20;
+}
+
+.signup-text-field-box {
+    -fx-alignment: center;
+}
+
+.signup-text-field-box > .text-field {
+    -fx-font-size: 16px;
+    -fx-font-family: Impact;
+    -fx-border-style: solid;
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+}
+
+.signup-button-box {
+    -fx-alignment: center;
+    -fx-padding: 15 10 15 20;
+}
+
+.signup-button-box > .button {
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-color: secondary;
+    -fx-border-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-font-family: Impact;
+}
+
+.signup-button-box > .button:hover, .button:focused {
+    -fx-background-color: primary;
+    -fx-text-fill: white;
+}
+
+.signup-text-box > .text-field {
+    -fx-pref-width: 250px;
+    -fx-font-family: Impact;
+    -fx-font-size: 14px;
+}
+
+.signup-text-box > .label {
+    -fx-font-family: Impact;
+    -fx-font-size: 16px;
+    -fx-spacing: 5px;
+}
+
+.signup-message-box {
+    -fx-alignment: center;
+    -fx-padding: 15 10 15 20;
+}
+
+.signup-message-box > .label {
+    -fx-font-family: Impact;
+    -fx-font-size: 16px;
+}
+
+
+.al-center-left {
+    -fx-alignment: center-left;
+}
+
+.sp-5 {
+    -fx-spacing: 5px;
+}
+
+.wid-120 {
+    -fx-pref-width: 120px;
+}
+
+.wid-200 {
+    -fx-pref-width: 200px;
+}
+
+
+.visitor-view {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 780px;
+
+}
+
+.side-bar {
+    -fx-padding: 10 0 0 0;
+    -fx-background-color: primary;
+}
+
+.side-bar-menu {
+    -fx-alignment: center;
+    -fx-spacing: 5px;
+    -fx-pref-height: 70px;
+    -fx-pref-width: 120px;
+    -fx-min-width: 120px;
+}
+
+.side-bar-menu:hover {
+    -fx-background-color: secondary-light;
+}
+
+.side-bar-menu:hover .label, .side-bar-menu:hover SVGPath {
+    -fx-fill: primary;
+    -fx-text-fill: primary;
+}
+
+.side-bar-menu .label, .side-bar-menu SVGPath {
+    -fx-fill: white;
+    -fx-text-fill: white;
+}
+
+.side-bar-menu > .menu-title {
+    -fx-font-size: 14px;
+    -fx-font-family: Impact;
+}
+
+.side-bar-menu.active {
+    -fx-background-color: secondary;
+}
+
+.content-view {
+    -fx-pref-width: 1180px;
+    -fx-pref-height: 780px;
+    -fx-max-width: 5000px;
+    -fx-max-height: 3000px;
+}
+
+.content-view-header {
+    -fx-padding: 20px;
+    -fx-background-color: primary;
+}
+
+.content-view-header > .title {
+    -fx-font-size: 30px;
+    -fx-font-family: Impact;
+    -fx-text-fill: white;
+}
+
+
+.add-button {
+    -fx-alignment: center;
+    -fx-pref-width: 100px;
+}
+
+.add-button:hover {
+    -fx-background-color: secondary-light;
+}
+
+.add-button:hover SVGPath {
+    -fx-fill: primary;
+}
+
+.dialog {
+    -fx-pref-width: 600px;
+    -fx-background-color: secondary-light;
+}
+
+.dialog-icon {
+    -fx-pref-width: 160px;
+    -fx-alignment: center;
+    -fx-background-color: primary;
+}
+
+.dialog-icon SVGPath {
+    -fx-fill: secondary-light;
+}
+
+.dialog-body {
+    -fx-padding: 20px;
+    -fx-alignment: center-left;
+}
+
+.dialog-title {
+    -fx-font-size: 24px;
+    -fx-font-family: Impact;
+}
+
+.dialog-message-box {
+    -fx-padding: 20 0 20 0;
+    -fx-font-family: Impact;
+    -fx-font-size: 18px;
+    -fx-spacing: 5;
+}
+
+.dialog-button-box {
+    -fx-alignment: center-right;
+}
+
+.dialog-input-box {
+    -fx-spacing: 5;
+}
+
+.sp-10 {
+    -fx-spacing: 10;
+}
+
+.home-visitor-image-box {
+    -fx-alignment: center;
+    -fx-max-width: 400;
+    -fx-max-height: 200;
+}
+
+.home-container {
+    -fx-padding: 0 20 20 20;
+}
+
+.home-container .info {
+    -fx-font-size: 20px;
+    -fx-font-family: Impact;
+    -fx-text-fill: primary;
+}
+
+.info-body {
+    -fx-padding: 16 32 16 16;
+}
+
+.home-image-box {
+    -fx-padding: 16 16 16 16;
+}
+
+.home-image-box > .button {
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-color: secondary;
+    -fx-border-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-font-family: Impact;
+}
+
+.home-image-box > .button:hover, .button:focused {
+    -fx-background-color: primary;
+    -fx-text-fill: white;
+}
+
+.button-update-home {
+    -fx-font-size: 20px;
+    -fx-font-family: Impact;
+    -fx-text-fill: primary;
+    -fx-pref-width: 260;
+}
+
+.search-bar {
+    -fx-padding: 10 0 0 20;
+    -fx-spacing: 10;
+}
+
+.search-bar > TextField, .search-bar > ComboBox {
+    -fx-pref-width: 200px;
+    -fx-max-width: 280px;
+}
+
+.table-wrapper {
+    -fx-padding: 20;
+}
+
+.centered-textArea .scroll-pane .content .text {
+    -fx-text-alignment: center;
+    -fx-font-family: Impact;
+    -fx-font-size: 12px;
+}
+
+.default-color-pool.chart-bar {
+    -fx-bar-fill: #1E90FF;
+}
+
+.default-color-gym.chart-bar {
+    -fx-bar-fill: #FF4500;
+}
+
+.info-container {
+    -fx-padding: 0 20 20 20;
+}
+
+.info-item {
+    -fx-alignment: center;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-pref-width: 310px;
+    -fx-pref-height: 380px;
+    -fx-background-color: secondary-light;
+}
+
+.info-label{
+    -fx-background-color: secondary;
+    -fx-text-fill: secondary-light;
+    -fx-font-size: 24px;
+    -fx-font-family: Impact;
+    -fx-pref-width: 5000px;
+}
+
+.info-item Label{
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-font-family: Impact;
+    -fx-alignment: center;
+}
+
+
+
+

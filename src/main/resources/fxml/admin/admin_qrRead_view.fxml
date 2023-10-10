@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="837.0" prefWidth="600.0" styleClass="content-view" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.orion.sk_orion_springboot.controller.adminController.AdminQRCodeController">
+   <children>
+      <HBox styleClass="content-view-header">
+         <children>
+            <Label fx:id="title" styleClass="title" text="QR Code Scanner" />
+         </children>
+      </HBox>
+      <Pane prefHeight="436.0" prefWidth="1180.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox layoutX="110.0" layoutY="14.0" prefHeight="468.0" prefWidth="444.0">
+               <children>
+                  <Pane fx:id="qrWeb" prefHeight="400.0" prefWidth="640.0">
+                     <children>
+                        <SwingNode fx:id="swingNode" />
+                     </children></Pane>
+                  <Label prefHeight="17.0" prefWidth="71.0" text="Result">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="result" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>

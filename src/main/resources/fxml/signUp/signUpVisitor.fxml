@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="747.0" prefWidth="791.0" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.orion.sk_orion_springboot.controller.signUp.VisitorSignUpController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="signup-title">
+         <children>
+            <Label styleClass="header" text="РЕГИСТРАЦИЯ ПОСЕТИТЕЛЯ" />
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="signup-view" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="43.0" prefWidth="600.0" styleClass="signup-text-box">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="136.0" text="    Имя" />
+                  <TextField fx:id="firstName" promptText="Имя">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="21.0" prefWidth="135.0" text="    Фамилия" />
+                  <TextField fx:id="lastName" prefWidth="222.0" promptText="Фамилия">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="600.0" styleClass="signup-text-box">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="136.0" text="    Дата рождения" />
+                  <DatePicker fx:id="dateOfBirth" prefHeight="27.0" prefWidth="245.0" promptText="Дата рождения">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></DatePicker>
+                  <Label prefHeight="21.0" prefWidth="135.0" text="    Номер телефона" />
+                  <TextField fx:id="numberPhone" promptText="Номер телефона">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="139.0" prefHeight="43.0" prefWidth="600.0" styleClass="signup-text-box">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="133.0" text="    E-mail" />
+                  <TextField fx:id="email" prefHeight="28.0" prefWidth="239.0" promptText="E-mail">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="182.0" prefHeight="43.0" prefWidth="600.0" styleClass="signup-text-box">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="136.0" text="    Логин" />
+                  <TextField fx:id="username" prefHeight="28.0" prefWidth="261.0" promptText="Логин">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="21.0" prefWidth="135.0" text="    Пароль" />
+                  <PasswordField fx:id="password" prefHeight="28.0" prefWidth="277.0" promptText="Пароль" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="327.0" prefHeight="43.0" prefWidth="600.0" styleClass="signup-text-box">
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="21.0" prefWidth="189.0" text="    Фото" />
+                  <ImageView fx:id="profileImage" fitHeight="150.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="imageButton" mnemonicParsing="false" onAction="#addImage" text="Выбрать...">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="222.0" prefHeight="43.0" prefWidth="600.0" styleClass="signup-text-box">
+               <children>
+                  <Label alignment="TOP_LEFT" prefHeight="21.0" prefWidth="189.0" text="Прикрепление документа" />
+                  <ImageView fx:id="docImage" fitHeight="150.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="docImageButton" mnemonicParsing="false" onAction="#addDocImage" text="Выбрать...">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="380.0" prefHeight="43.0" prefWidth="600.0" styleClass="signup-message-box">
+               <children>
+                  <Label fx:id="message" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="298.0" prefHeight="43.0" prefWidth="600.0" styleClass="signup-button-box">
+               <children>
+                  <Button fx:id="registerButton" mnemonicParsing="false" onAction="#register" styleClass="wid-120" text="Регистрация">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="closeButton" layoutX="255.0" layoutY="25.0" mnemonicParsing="false" onAction="#close" styleClass="wid-120" text="Выйти" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

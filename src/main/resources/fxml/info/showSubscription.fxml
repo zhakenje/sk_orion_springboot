@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="772.0" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.orion.sk_orion_springboot.controller.info.ElectronSubscriptionShow">
+   <children>
+      <HBox alignment="TOP_RIGHT" prefHeight="187.0" prefWidth="791.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="44.0" prefWidth="541.0" text="ГБУ Бассейн &quot;Орион&quot;">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="qrImageView" fitHeight="219.0" fitWidth="255.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox prefHeight="43.0" prefWidth="772.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="119.0" styleClass="signup-text-box" text="Абонемент №">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idSubscription" editable="false">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="229.0" prefHeight="43.0" prefWidth="772.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="119.0" styleClass="signup-text-box" text="ФИО">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FIO" editable="false">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="272.0" prefHeight="43.0" prefWidth="772.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="119.0" styleClass="signup-text-box" text="Адрес">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="address" editable="false">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="315.0" prefHeight="43.0" prefWidth="772.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="119.0" styleClass="signup-text-box" text="Вид занятие">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="typeGroup" editable="false">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="72.0" styleClass="signup-text-box" text="Сумма">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="price" editable="false" layoutX="129.0" layoutY="20.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="358.0" prefHeight="43.0" prefWidth="772.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="215.0" styleClass="signup-text-box" text="Срок действие абонемента :  с">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="dateOfPurchase" editable="false" prefHeight="27.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="48.0" styleClass="signup-text-box" text="по">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="dateOfValidity" editable="false" layoutX="129.0" layoutY="20.0" prefHeight="27.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="401.0" prefHeight="43.0" prefWidth="772.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="178.0" styleClass="signup-text-box" text="Количество посещений">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberVisits" editable="false" prefHeight="27.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="164.0" styleClass="signup-text-box" text="Осталось посещений">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="visitsLeft" editable="false" layoutX="129.0" layoutY="20.0" prefHeight="27.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+   </children>
+</VBox>

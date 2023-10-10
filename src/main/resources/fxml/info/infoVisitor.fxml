@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="791.0" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.orion.sk_orion_springboot.controller.info.ViewInfoVisitor">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="signup-title">
+         <children>
+            <Label styleClass="header" text="ИНФОРМАЦИЯ О ПОСЕТИТЕЛЕ" />
+         </children>
+      </HBox>
+      <VBox prefHeight="649.0" prefWidth="791.0" styleClass="signup-view">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="profileImage" fitHeight="212.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <HBox prefHeight="67.0" prefWidth="153.0" styleClass="signup-text-box">
+                     <children>
+                        <Label text="Имя" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="67.0" prefWidth="260.0" styleClass="signup-text-field-box">
+                     <children>
+                        <TextField fx:id="lastName" editable="false" prefHeight="21.0" prefWidth="167.0" styleClass="signup-text-field-box" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="231.0" layoutY="10.0" prefHeight="67.0" prefWidth="158.0" styleClass="signup-text-box">
+                     <children>
+                        <Label text="Фамилия" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="430.0" layoutY="10.0" prefHeight="67.0" prefWidth="260.0" styleClass="signup-text-field-box">
+                     <children>
+                        <TextField fx:id="firstName" editable="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <HBox prefHeight="67.0" prefWidth="153.0" styleClass="signup-text-box">
+                     <children>
+                        <Label text="Дата рождения" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="67.0" prefWidth="260.0" styleClass="signup-text-field-box">
+                     <children>
+                        <TextField fx:id="dateOfBirth" editable="false" prefHeight="21.0" prefWidth="167.0" styleClass="signup-text-field-box" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="231.0" layoutY="10.0" prefHeight="67.0" prefWidth="158.0" styleClass="signup-text-box">
+                     <children>
+                        <Label text="Номер телефона" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="430.0" layoutY="10.0" prefHeight="67.0" prefWidth="260.0" styleClass="signup-text-field-box">
+                     <children>
+                        <TextField fx:id="numberPhone" editable="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="77.0">
+               <children>
+                  <HBox prefHeight="67.0" prefWidth="153.0" styleClass="signup-text-box">
+                     <children>
+                        <Label text="Email" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="67.0" prefWidth="231.0" styleClass="signup-text-field-box">
+                     <children>
+                        <TextField fx:id="email" editable="false" prefHeight="21.0" prefWidth="167.0" styleClass="signup-text-field-box" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="430.0" layoutY="10.0" prefHeight="67.0" prefWidth="208.0" styleClass="signup-button-box">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#showDoc" text="Посмотреть справку" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="356.0">
+               <children>
+                  <HBox prefHeight="67.0" prefWidth="168.0" styleClass="signup-text-box">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="143.0" text="Допуск к бассейну" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="231.0">
+                     <children>
+                        <RadioButton fx:id="radioTrue" mnemonicParsing="false" text="Да">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="chkDoc" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radioFalse" mnemonicParsing="false" text="Нет" toggleGroup="$chkDoc">
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="signup-button-box">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#save" prefHeight="34.0" prefWidth="173.0" text="Сохранить">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="324.0" layoutY="42.0" mnemonicParsing="false" onAction="#close" prefHeight="34.0" prefWidth="173.0" text="Выйти" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="content-view" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.orion.sk_orion_springboot.controller.visitorController.VisitorAboutUsController">
+   <children>
+      <HBox styleClass="content-view-header">
+         <children>
+            <Label fx:id="title" styleClass="title" text="СПОРТ КОМПЛЕКС ОРИОН" />
+         </children>
+      </HBox>
+      <HBox prefHeight="42.0" prefWidth="1180.0">
+         <children>
+            <ComboBox fx:id="selectView" layoutX="20.0" layoutY="20.0" onAction="#selectInfo" prefHeight="25.0" prefWidth="298.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <AnchorPane>
+         <children>
+            <AnchorPane fx:id="infoSK" prefHeight="658.0" prefWidth="1180.0" visible="false">
+               <children>
+                  <VBox prefHeight="658.0" prefWidth="1180.0">
+                     <children>
+                        <TextArea prefHeight="177.0" prefWidth="1180.0" text="ГБУ Бассейн “Орион”&#10;Государственное бюджетное учреждение Бассейн “Орион”&#10;Официальный сайт&#10;Государственное бюджетное учреждение «Бассейн «Орион» создано 1 февраля 2009 года. Учреждение включает в себя: плавательный бассейн «Орион»&#10;, теннисный корт. &#10;В бассейне «Орион» регулярно проводятся соревнования по водным видам спорта. Ежедневно бассейн «Орион» посещает около 400 человек.">
+                           <font>
+                              <Font name="Impact" size="16.0" />
+                           </font>
+                        </TextArea>
+                        <HBox>
+                           <children>
+                              <ImageView fitHeight="528.0" fitWidth="730.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/path1170.png" />
+                                 </image>
+                              </ImageView>
+                              <TextArea prefHeight="104.0" prefWidth="1180.0" text="Директор: Волкова Елена Юрьевна &#10;&#10;Адрес: 469320, г. Байконур, ул. Им. Максимова А.А., дом 6.&#10;&#10;Распорядок работы:&#10;&#10;Понедельник: 12:00ч. – 22:00 ч.&#10;Вторник-пятница: 08:00 ч. – 22:30 ч.&#10;Технологический перерыв: 12:45 ч. – 13:45 ч.&#10;Суббота: 10:00 ч. – 17:00 ч.&#10;Воскресение: 10:00ч. – 17:00 ч.&#10;&#10;Телефон для справок: 4-20-62.">
+                                 <font>
+                                    <Font name="Impact" size="16.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="infoIns" prefHeight="658.0" prefWidth="1180.0">
+               <children>
+                  <ScrollPane fx:id="scrollContainer" prefHeight="657.0" prefWidth="1180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <TilePane fx:id="container">
+                           <children>
+                              <VBox prefHeight="438.0" prefWidth="371.0" styleClass="info-item">
+                                 <children>
+                                    <ImageView fitHeight="175.0" fitWidth="198.0" pickOnBounds="true" preserveRatio="true" />
+                                    <GridPane>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="ФИО" />
+                                          <Label text="Label" GridPane.columnIndex="1" />
+                                          <Label text="Направление" GridPane.rowIndex="1" />
+                                          <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label text="Год рождения" GridPane.rowIndex="2" />
+                                          <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label text="Стаж" GridPane.rowIndex="3" />
+                                          <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </TilePane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

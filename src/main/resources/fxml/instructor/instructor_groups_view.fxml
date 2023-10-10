@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="content-view" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.orion.sk_orion_springboot.controller.instructorController.InstructorGroupsController">
+   <children>
+      <HBox styleClass="content-view-header">
+         <children>
+            <Label fx:id="title" styleClass="title" text="ГРУППЫ" />
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label prefHeight="52.0" prefWidth="538.0" text="СПИСОК ГРУПП, В КОТОРЫХ ВЫ ИНСТРУКТИРУЕТЕ" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Impact" size="27.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="129.5" text="ID Группы">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="334.5" text="Тип группы">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="typeOfGroup" />
+                    </cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="108.5" text="Дни недели">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="daysOfWeek" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="188.0" text="Время проведение занятие">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="timeClass" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="195.5" text="Количество людей в группе">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="sizeOfGroup" />
+                      </cellValueFactory>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</VBox>

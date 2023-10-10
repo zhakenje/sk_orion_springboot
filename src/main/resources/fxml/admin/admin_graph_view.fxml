@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="837.0" prefWidth="600.0" styleClass="content-view" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kz.orion.sk_orion_springboot.controller.adminController.AdminGraphController">
+   <children>
+      <HBox styleClass="content-view-header">
+         <children>
+            <Label fx:id="title" styleClass="title" text="ГРАФИК ПОСЕЩЕНИЙ" />
+         </children>
+      </HBox>
+      <TilePane prefHeight="200.0" prefWidth="200.0" styleClass="home-container" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="1160.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label text="ГРАФИК ПОСЕЩЕНИЙ ПО КРИТЕРИЯМ">
+                           <font>
+                              <Font name="Impact" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="68.0" prefWidth="1119.0" styleClass="table-wrapper">
+                     <children>
+                        <VBox>
+                           <children>
+                              <ComboBox fx:id="typeGraph" onAction="#selectTypeGraph" prefHeight="25.0" prefWidth="212.0" promptText="Тип графика">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="yearComboBox" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="212.0" promptText="Выберите год">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin> 
+                              </ComboBox>
+                              <ComboBox fx:id="monthComboBox" onAction="#setItemsDayComboBox" prefHeight="25.0" prefWidth="212.0" promptText="Выберите месяц">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="dayComboBox" prefHeight="25.0" prefWidth="212.0" promptText="Выберите день" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#showGraph" prefHeight="29.0" prefWidth="135.0" text="ВЫВОД">
+                           <font>
+                              <Font name="Impact" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="message" prefHeight="64.0" prefWidth="1101.0" styleClass="dialog-message-box" />
+               </children>
+            </VBox>
+            <AnchorPane fx:id="anchorPaneYear" prefHeight="364.0" prefWidth="1160.0">
+               <children>
+                  <StackedBarChart fx:id="barChart" layoutY="-92.0" prefHeight="418.0" prefWidth="1101.0">
+                    <xAxis>
+                      <CategoryAxis fx:id="categoryAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="numberAxis" side="LEFT" />
+                    </yAxis>
+                  </StackedBarChart>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPaneMonth" layoutX="30.0" layoutY="374.0" prefHeight="364.0" prefWidth="1160.0" visible="false">
+               <children>
+                  <StackedBarChart fx:id="barChart1" layoutX="1.0" layoutY="-456.0" prefHeight="418.0" prefWidth="1101.0">
+                     <xAxis>
+                        <CategoryAxis fx:id="categoryAxis1" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="numberAxis1" side="LEFT" />
+                     </yAxis>
+                  </StackedBarChart>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorPaneDay" layoutX="30.0" layoutY="738.0" prefHeight="364.0" prefWidth="1160.0" visible="false">
+               <children>
+                  <StackedBarChart fx:id="barChart11" layoutY="-820.0" prefHeight="418.0" prefWidth="1101.0">
+                     <xAxis>
+                        <CategoryAxis fx:id="categoryAxis11" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="numberAxis11" side="LEFT" />
+                     </yAxis>
+                  </StackedBarChart>
+               </children>
+            </AnchorPane>
+         </children>
+      </TilePane>
+   </children>
+</VBox>
